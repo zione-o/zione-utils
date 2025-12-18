@@ -27,3 +27,50 @@ const onResize = debounce(() => {
 }, 300);
 
 window.addEventListener('resize', onResize);
+
+## throttle
+
+Limit function execution to once per interval.
+
+```js
+import { throttle } from './index.js';
+
+const onScroll = throttle(() => {
+  console.log('scrolling');
+}, 200);
+
+window.addEventListener('scroll', onScroll);
+```
+## throttle
+
+Limit function execution to once per interval.
+
+```js
+import { throttle } from './index.js';
+
+const onScroll = throttle(() => {
+  console.log('scrolling');
+}, 200);
+
+window.addEventListener('scroll', onScroll);
+```
+## sleep
+
+Pause execution for a specified amount of time.
+
+This utility is useful for delaying actions, retry logic, or simulating
+async behavior in real-world applications.
+
+### Usage
+
+```js
+import { sleep } from './index.js';
+
+async function example() {
+  console.log('waiting...');
+  await sleep(1000);
+  console.log('done');
+}
+
+example();
+```
